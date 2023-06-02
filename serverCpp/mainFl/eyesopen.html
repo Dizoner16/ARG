@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .WatchText {height: 30px;width: 100%;}
+        #EyeText{color: #F9F6EE;font-size: 20;text-align: center;}
+        body {background-color: black;}
+        #eye {height: 35%;width: 60%;margin-left: 20%;margin-top: 10%;}
+        #mainButton {position:absolute;height:5%;width: 5%;margin-left: 47%;margin-top: 24%;opacity: 0.1;border-radius: 30px;border-color: #F9F6EE;}
+        .afterClick{position:absolute;height:10%;width: 10%;margin-left: 45%;margin-top: 30%; background:transparent;border-radius:50%;border-color: transparent;}
+    </style>
+    <title>10201</title>
+</head>
+<body>
+    <div class="WatchText" onclick="acceptance()">
+        <h1 id="EyeText">You are being scrutinized</h1>
+    </div>
+    <button id="mainButton" onclick="acceptance()" ondblclick="feelfree()">.</button>
+    <img src="https://thehackernews.com/new-images/img/b/R29vZ2xl/AVvXsEijRMSv9EpAsWacFxrCVU3HzjP_Tf3E_gw7wvaPYO5MivK7xTn6SSOQrEOy3H6fMsFwmBmU12fZOyL23RntAwGpPgJYrRLC90gCMpB9UKvdVoUidw-s13AWwAOSxCTDAPob6jALRMpzrOnMXidH4XJsx6r2OjYQy4nVYBe5RaZuaOymzhIaN7LnuQZn/s800/eye.gif" alt ="die" id="eye">
+    
+    <script>
+        function acceptance () {
+            var TextMain = document.getElementById("EyeText");
+            var image = document.getElementById("eye");
+            var btn = document.getElementById("mainButton");
+            if (image.src=="https://thehackernews.com/new-images/img/b/R29vZ2xl/AVvXsEijRMSv9EpAsWacFxrCVU3HzjP_Tf3E_gw7wvaPYO5MivK7xTn6SSOQrEOy3H6fMsFwmBmU12fZOyL23RntAwGpPgJYrRLC90gCMpB9UKvdVoUidw-s13AWwAOSxCTDAPob6jALRMpzrOnMXidH4XJsx6r2OjYQy4nVYBe5RaZuaOymzhIaN7LnuQZn/s800/eye.gif") {
+                image.src = "https://gifdb.com/images/file/black-sad-eye-art-f51auccfperavhav.gif";
+                btn.removeAttribute('id');
+                btn.setAttribute("class", "afterClick");
+            }
+            TextMain.innerHTML = "It hurts!";
+        }
+        function feelfree () {
+            let ask = prompt("What is the code?", '');
+            if (ask == 122199) {
+                alert("You now have to go");
+                alert("https://youtu.be/qfidRRBhFb4");
+            }
+        }
+    </script>
+</body>
+</html>
